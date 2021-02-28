@@ -1,6 +1,8 @@
 import org.junit.jupiter.api.*;
 
 import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -62,10 +64,18 @@ class RestaurantServiceTest {
 
     //>>>>>>>>>>>>>>>>>>>>>>>TDD TESTING GETORDERVALUE>>>>>>>>>>>>>>>>>>>>>
 
-    //Failed Test Case
+    /*//Failed Test Case
     @Test
     public void User_selected_items_should_return_the_total_price_gets_failed(){
         assertEquals(service.getTotalValue(),388.0);
+    }*/
+
+    @Test
+    public void User_selected_items_should_return_the_total_price() throws restaurantNotFoundException {
+        List<String> selectItem = new ArrayList<>();
+        selectItem.add("Sweet corn soup");
+        selectItem.add("Vegetable lasagne");
+        assertEquals(service.getTotalValue(selectItem,"Amelie's cafe"),388.0);
     }
     //>>>>>>>>>>>>>>>>>>>>>>>TDD TESTING GETORDERVALUE>>>>>>>>>>>>>>>>>>>>>
 }
