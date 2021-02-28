@@ -59,4 +59,13 @@ class RestaurantServiceTest {
         assertEquals(initialNumberOfRestaurants + 1,service.getRestaurants().size());
     }
     //<<<<<<<<<<<<<<<<<<<<ADMIN: ADDING & REMOVING RESTAURANTS>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+    //>>>>>>>>>>>>>>>>>>>>>>>TDD TESTING GETORDERVALUE>>>>>>>>>>>>>>>>>>>>>
+
+    //Failed Test Case
+    @Test
+    public void User_selected_items_should_return_the_total_price_gets_failed(){
+        assertEquals(service.getTotalValue(),388.0);
+    }
+    //>>>>>>>>>>>>>>>>>>>>>>>TDD TESTING GETORDERVALUE>>>>>>>>>>>>>>>>>>>>>
 }

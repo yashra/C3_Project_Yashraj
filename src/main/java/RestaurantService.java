@@ -30,4 +30,13 @@ public class RestaurantService {
     public List<Restaurant> getRestaurants() {
         return restaurants;
     }
+
+    // Implemented code for TDD Testing
+
+    public double getTotalValue(){
+        double sum = 0.0;
+
+        return sum;
+    }
+
 }
